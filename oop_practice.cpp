@@ -17,6 +17,12 @@ class Character {
         std::cout << name << " has " << health << " HP and " << attackPower << " attack power." << std::endl;
 
     }
+
+    void attack(Character &target) {
+        target.health = target.health - attackPower;
+        std::cout << name << " attacks " << target.name << " for " << attackPower << " damage!" << std::endl;
+    }
+
 };
 
 int main() {
